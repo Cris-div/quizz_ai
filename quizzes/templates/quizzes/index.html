@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz.AI 🧠</title>
+  <link rel="stylesheet" href="{% static 'quizzes/style.css' %}">
+</head>
+<body>
+  <div class="container">
+    <h1>🧠 Quiz.AI</h1>
+    <p class="subtitle">Sistema inteligente de cuestionarios con Django REST</p>
+
+    <div id="quiz-list" class="card">
+      <h2>🎯 Selecciona un Quiz</h2>
+      <ul id="quiz-container"></ul>
+    </div>
+
+    <div id="quiz-detail" class="card hidden">
+      <h2 id="quiz-title"></h2>
+      <p id="quiz-description"></p>
+      <form id="quiz-form"></form>
+      <button id="submit-answers" class="btn primary">Enviar respuestas</button>
+      <div id="quiz-result"></div>
+    </div>
+  </div>
+
+  <script src="{% static 'quizzes/app.js' %}"></script>
+</body>
+</html>
